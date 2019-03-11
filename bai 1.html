@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ngonngu">
+<input type="button" value="Đổi ngôn ngữ" onclick="doi()">
+<div id="kq"></div>
+<script>
+    let English = ['Hello','Goodmorning','Water','Hot'];
+    let Vietnam = ['Xin chào', 'Chào buổi sáng','Nước','Nóng'];
+    let e;
+    function doi() {
+        let a = document.getElementById("ngonngu").value;
+        for(let i=0;i<English.length;i++){
+            if(a === English[i]){
+                e = Vietnam[i];
+                break;
+            }else{
+                e = 'Không tìm thấy'
+            }
+        }
+        document.getElementById('kq').innerHTML=  e
+    }
+</script>
+</body>
+</html>
